@@ -1,0 +1,128 @@
+.header {
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    min-height: 60px;
+    height: 10%;
+    max-height: 70px;
+    background-color: black;
+    padding: $main-spacing * 0.5;
+    justify-content: space-between;
+
+    .logo {
+        margin-left: $main-spacing*.2;
+        letter-spacing: $main-spacing*.2;
+        color: #111;
+        font-size: $base-font-size*2.3;
+
+        .logo__letter {
+            display: table-cell;
+            animation: neon 10s linear infinite;
+        }
+
+        .logo__letter:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .logo__letter:nth-child(2) {
+            animation-delay: 0.25s;
+        }
+
+        .logo__letter:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        .logo__letter:nth-child(4) {
+            animation-delay: 0.75s;
+        }
+
+        .logo__letter:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        .logo__letter:nth-child(6) {
+            animation-delay: 1.25s;
+        }
+
+        .logo__letter:nth-child(7) {
+            animation-delay: 1.5s;
+        }
+
+        .logo__letter:nth-child(8) {
+            animation-delay: 1.8s;
+            padding-left: $main-spacing;
+        }
+
+
+
+        @keyframes neon {
+
+            0%,
+            45% {
+                color: #fff;
+                filter: blur(2px);
+                text-shadow: 0 0 10px rgb(49, 130, 252), 0 0 20px rgb(49, 130, 252),
+                    0 0 40px rgb(49, 130, 252), 0 0 80px rgb(49, 130, 252),
+                    0 0 140px rgb(49, 130, 252), 0 0 250px rgb(49, 130, 252),
+                    0 0 400px rgb(49, 130, 252),
+                    0 0 400px rgb(49, 130, 252);
+            }
+
+            5%,
+            45% {
+                color: #111;
+                filter: blur(0px);
+                text-shadow: none;
+            }
+
+            55%,
+            100% {
+                color: #fff;
+                filter: blur(2px);
+                text-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(49, 130, 252),
+                    0 0 40px rgb(49, 130, 252), 0 0 80px rgb(49, 252, 117),
+                    0 0 140px rgb(255, 0, 0), 0 0 250px rgb(49, 130, 252),
+                    0 0 400px rgb(0, 255, 106);
+            }
+
+            60%,
+            100% {
+                color: #111;
+                filter: blur(0px);
+                text-shadow: none;
+            }
+        }
+    }
+
+    .navigation {
+
+        margin-right: $main-spacing;
+
+
+
+        .navigation__container {
+            display: none;
+        }
+
+
+        .app-header__hamburger-menu {
+            background-color: black;
+            top: $main-spacing*.5;
+            right: $main-spacing *3;
+            width: $main-spacing*2.5;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .app-header__hamburger-menu-bar {
+                background-color: white;
+                height: $main-spacing*.32;
+                width: 100%;
+                border-radius: 14%;
+                transition: 1s;
+
+            }
+        }
+    }
+}

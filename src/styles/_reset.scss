@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$base-font-size: 16px;
+
+$main-spacing: 20px;
+
+$main-color: #26262A;
+
+
+$breakpoins: (xs: 360px,
+    sm: 480px,
+    md: 640px,
+    lg: 800px,
+    xl:1280px,
+
+);
+
+h1 {
+    font-family: 'Caveat', cursive;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+p,
+a,
+span {
+    font-family: 'Lato', sans-serif;
+}
