@@ -1,0 +1,109 @@
+.swiper-container {
+
+    position: relative;
+    width: 100%;
+    height: 800px;
+    display: flex;
+
+
+    .parallax-bg {
+        position: absolute;
+        background-image: url('../img/mobileProjects_460-751.jpg');
+        left: 0;
+        top: 0;
+        width: 130%;
+        height: 100%;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+
+        @media screen and (min-width: map-get($breakpoins, sm)) {
+            background-image: url("../img/mobileProjects_800-859.jpg");
+        }
+
+        @media screen and (min-width: map-get($breakpoins, lg)) {
+            background-image: url("../img/desktopProjects_1280-609.jpg");
+        }
+
+        @media screen and (min-width: map-get($breakpoins, xl)) {
+            background-image: url("../img/desktopProjects_1980-940.jpg");
+        }
+
+    }
+
+    .swiper-wrapper {
+        position: relative;
+        display: flex;
+
+        .swiper-slide {
+            width: 100%;
+            height: 100%;
+            font-size: 18px;
+            color: #fff;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 40px 60px;
+        }
+
+        .swiper-slide .title {
+
+            font-size: 41px;
+            font-weight: 300;
+        }
+
+        .swiper-slide .subtitle {
+            font-size: 21px;
+        }
+
+        .swiper-slide .text {
+            font-size: 14px;
+            max-width: 400px;
+            line-height: 1.3;
+        }
+
+        .swiper__project-container {
+            width: 25%;
+            height: 50%;
+            position: absolute;
+            bottom: 50px;
+
+            @media screen and (min-width: map-get($breakpoins, xl)) {
+                width: 22%;
+
+            }
+
+
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .swiper__slide1-position {
+            left: 4%;
+
+            @media screen and (min-width: map-get($breakpoins, xl)) {
+                right: 68%
+            }
+        }
+
+        .swiper__slide2-position {
+            left: 37%;
+
+            @media screen and (min-width: map-get($breakpoins, xl)) {
+                right: 35%
+            }
+        }
+
+        .swiper__slide3-position {
+            left: 71%;
+
+            @media screen and (min-width: map-get($breakpoins, xl)) {
+                right: 1%
+            }
+        }
+
+    }
+
+
+
+
+}

@@ -4,11 +4,22 @@
     box-sizing: border-box;
 }
 
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
 $base-font-size: 16px;
 
 $main-spacing: 20px;
 
-$main-color: #26262A;
+$main-color: #131315;
+
+$secondary-color: rgb(49, 130, 252);
+
+$additives-color: rgb(255, 19, 19);
 
 
 $breakpoins: (xs: 360px,

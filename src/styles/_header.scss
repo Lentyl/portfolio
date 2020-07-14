@@ -1,5 +1,5 @@
 .header {
-    max-width: 100%;
+    width: 100%;
     position: relative;
     display: flex;
     min-height: 60px;
@@ -10,14 +10,37 @@
     justify-content: space-between;
 
     .logo {
-        margin-left: $main-spacing*.2;
-        letter-spacing: $main-spacing*.2;
+        margin-left: $main-spacing * 0.2;
+        letter-spacing: $main-spacing * 0.2;
         color: #111;
-        font-size: $base-font-size*2.3;
+        font-size: $base-font-size * 1.4;
+
+        @media screen and (min-width: map-get($breakpoins, md)) {
+            font-size: $base-font-size * 1.6;
+            margin-left: $main-spacing*2;
+            margin-top: $main-spacing;
+        }
+
+        @media screen and (min-width: map-get($breakpoins, lg)) {
+            font-size: $base-font-size * 1.8;
+        }
+
+        @media screen and (min-width: map-get($breakpoins, xl)) {
+            font-size: $base-font-size * 2;
+        }
 
         .logo__letter {
             display: table-cell;
             animation: neon 10s linear infinite;
+
+            text-shadow: 4px 4px 10px $additives-color;
+            color: rgb(49, 130, 252);
+            text-shadow: 1px 1px 10px rgb(255, 0, 0), 0 0 40px rgb(255, 0, 0),
+                0 0 80px 10px rgb(255, 0, 0), 0 0 120px 20px rgb(255, 0, 0),
+                0 0 160px rgb(49, 130, 252), 0 0 250px rgb(49, 130, 252),
+                0 0 320px rgb(49, 130, 252), 0 0 400px rgb(49, 130, 252);
+
+
         }
 
         .logo__letter:nth-child(1) {
@@ -49,80 +72,42 @@
         }
 
         .logo__letter:nth-child(8) {
-            animation-delay: 1.8s;
-            padding-left: $main-spacing;
+            animation-delay: 1.6s;
+            padding-left: $main-spacing*.8;
         }
-
-
 
         @keyframes neon {
 
-            0%,
+            0% {
+
+
+                opacity: 0;
+
+            }
+
+            5% {
+                opacity: 1;
+            }
+
             45% {
-                color: #fff;
-                filter: blur(2px);
-                text-shadow: 0 0 10px rgb(49, 130, 252), 0 0 20px rgb(49, 130, 252),
-                    0 0 40px rgb(49, 130, 252), 0 0 80px rgb(49, 130, 252),
-                    0 0 140px rgb(49, 130, 252), 0 0 250px rgb(49, 130, 252),
-                    0 0 400px rgb(49, 130, 252),
-                    0 0 400px rgb(49, 130, 252);
+                opacity: 1;
             }
 
-            5%,
-            45% {
-                color: #111;
-                filter: blur(0px);
-                text-shadow: none;
+            70% {
+
+                opacity: 0;
             }
 
-            55%,
-            100% {
-                color: #fff;
-                filter: blur(2px);
-                text-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(49, 130, 252),
-                    0 0 40px rgb(49, 130, 252), 0 0 80px rgb(49, 252, 117),
-                    0 0 140px rgb(255, 0, 0), 0 0 250px rgb(49, 130, 252),
-                    0 0 400px rgb(0, 255, 106);
+            80% {
+                opacity: 1;
             }
 
-            60%,
-            100% {
-                color: #111;
-                filter: blur(0px);
-                text-shadow: none;
+            90% {
+                opacity: 1;
             }
+
+
         }
     }
 
-    .navigation {
-
-        margin-right: $main-spacing;
-
-
-
-        .navigation__container {
-            display: none;
-        }
-
-
-        .app-header__hamburger-menu {
-            background-color: black;
-            top: $main-spacing*.5;
-            right: $main-spacing *3;
-            width: $main-spacing*2.5;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            .app-header__hamburger-menu-bar {
-                background-color: white;
-                height: $main-spacing*.32;
-                width: 100%;
-                border-radius: 14%;
-                transition: 1s;
-
-            }
-        }
-    }
 }

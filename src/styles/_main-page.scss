@@ -1,9 +1,64 @@
 .app-container {
+  flex: 1;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   color: white;
   background-color: $main-color;
+
+  .main-page {
+    position: relative;
+
+    .main-page__matrix-image-container {
+      position: absolute;
+      right: 0;
+      top: 300px;
+
+      width: 100%;
+      height: 600px;
+
+      @media screen and (min-width: map-get($breakpoins, sm)) {
+        width: 100%;
+      }
+
+      @media screen and (min-width: map-get($breakpoins, lg)) {
+        top: 80px;
+      }
+
+      .main-page__matrix-image-canvas {
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0.5;
+
+        @media screen and (min-width: map-get($breakpoins, sm)) {}
+      }
+
+      .main-page__matrix-image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 400px;
+
+        @media screen and (min-width: map-get($breakpoins, xl)) {
+          right: $main-spacing * 8;
+        }
+      }
+    }
+  }
+
+  .visable {
+    display: block;
+  }
+
+  .notVisabe {
+    display: none;
+  }
 }
