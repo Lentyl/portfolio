@@ -315,5 +315,11 @@
       transform: translateY(15px);
 
     }
+
+    @media screen and (min-width: map-get($breakpoins, xl)) {
+      margin: 0 100px;
+    }
   }
+
+
 }

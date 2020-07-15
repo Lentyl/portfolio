@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import smoke from "../img/smoke.mp4";
-import mainPhoto_460 from "../img/face_460-795-min.jpg";
-import mainPhoto_800 from "../img/face_800-1382-min.jpg";
-import mainPhoto_1280 from "../img/face_1280-2212-min.jpg";
-import mainPhoto_1980 from "../img/face_1980-3421-min.jpg";
+import mainPhoto_460 from "../img/face_460-795.jpg";
+import mainPhoto_800 from "../img/face_800-1382.jpg";
+import mainPhoto_1280 from "../img/face_1280-2212.jpg";
+import mainPhoto_1980 from "../img/face_1980-3421.jpg";
 import Sections from "./parts/Sections";
 
 const MainPage = () => {
@@ -31,7 +31,7 @@ const MainPage = () => {
         ctx.fillStyle = "#0F0";
         ctx.font = font_size + "px arial";
 
-        for (var i = 0; i < drops.length; i++) {
+        for (let i = 0; i < drops.length; i++) {
           let text = matrix[Math.floor(Math.random() * matrix.length)];
 
           ctx.fillText(text, i * font_size, drops[i] * font_size);

@@ -17,6 +17,10 @@
     margin-bottom: $main-spacing * 0.4;
     z-index: 2;
 
+    @media screen and (min-width: map-get($breakpoins, xl)) {
+      padding-left: $main-spacing*5;
+    }
+
     .main-page__welcome-letters {
       opacity: 0;
       animation: firstLine 1.5s forwards;
@@ -35,6 +39,10 @@
     display: flex;
     margin-bottom: $main-spacing * 0.4;
     padding-left: $main-spacing * 3;
+
+    @media screen and (min-width: map-get($breakpoins, xl)) {
+      padding-left: $main-spacing*5;
+    }
 
     .main-page__welcome-letters {
       opacity: 0;
@@ -132,13 +140,20 @@
 
       @media screen and (min-width: map-get($breakpoins, xl)) {
         opacity: 1;
+
+        margin-left: $main-spacing*2;
       }
+
     }
 
     .main-page__new-line-3 {
       transform: scale(1.1);
-      padding-bottom: 20px;
+      padding-bottom: $main-spacing;
       z-index: 2;
+
+      @media screen and (min-width: map-get($breakpoins, xl)) {
+        padding-left: $main-spacing*3;
+      }
 
       .main-page__welcome-letters {
 
@@ -246,6 +261,7 @@
 
 
 .main-page__img {
+
   width: 250px;
   position: absolute;
   top: 300px;

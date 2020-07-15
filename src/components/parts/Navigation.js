@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-//import {} from "@fortawesome/free-solid-svg-icons";
-import { svgSkills } from "../../img/skills.svg";
 import SECTIONS from "../../data/sections";
 
 const navList = SECTIONS;
@@ -50,10 +47,7 @@ const Navigation = () => {
             <circle cx="66.21" cy="126" r="2" />
           </svg> //Created by priyanka from https://thenounproject.com/
         ) : (
-          <FontAwesomeIcon
-            className="navigation__desktop-icon"
-            icon={item.icon}
-          />
+          <item.icon className="navigation__desktop-icon" />
         )}
       </div>
       <li className="navigation__desktop-element">{item.title}</li>

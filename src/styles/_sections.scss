@@ -24,23 +24,28 @@
       position: relative;
       width: 100%;
       height: 700px;
-      background-position: 70% 50%;
-      background-size: 200% 100%;
+      background-position: top;
+      background-size: 150% 100%;
       background-attachment: fixed;
       background-repeat: no-repeat;
 
-      background-image: url("../img//section1_460-307.jpg");
+      background-image: url("../img/section1_460-306.jpg");
 
-      @media screen and (min-width: map-get($breakpoins, md)) {
+      @media screen and (min-width: map-get($breakpoins, sm)) {
+
         background-image: url("../img/section1_800-533.jpg");
       }
 
       @media screen and (min-width: map-get($breakpoins, lg)) {
         background-image: url("../img/section1_1280-827.jpg");
+
+        background-position: top;
       }
 
       @media screen and (min-width: map-get($breakpoins, xl)) {
+        background-position: top;
         background-image: url("../img/section1_1980-1280.jpg");
+        height: 1000px;
       }
     }
 
@@ -52,18 +57,19 @@
       background-size: cover;
       background-attachment: fixed;
       background-repeat: no-repeat;
-      background-image: url("../img/section2_460-507.jpg");
+      background-image: url("../img/section2_460-684.jpg");
 
-      @media screen and (min-width: map-get($breakpoins, md)) {
-        background-image: url("../img/section2_800-882.jpg");
+      @media screen and (min-width: map-get($breakpoins, sm)) {
+        background-image: url("../img/section2_800-533.jpg");
       }
 
       @media screen and (min-width: map-get($breakpoins, lg)) {
-        background-image: url("../img/section2_1280-1411.jpg");
+        background-image: url("../img/section2_1280-853.jpg");
       }
 
       @media screen and (min-width: map-get($breakpoins, xl)) {
-        background-image: url("../img/section2_1980-2183.jpg");
+        background-image: url("../img/section2_1980-1320.jpg");
+        height: 1000px;
       }
     }
 
