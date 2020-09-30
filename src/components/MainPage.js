@@ -41,9 +41,9 @@ const MainPage = () => {
 
           drops[i]++;
         }
+        requestAnimationFrame(draw);
       }
-
-      setInterval(draw, 35);
+      draw();
     };
 
     setTimeout(() => {
@@ -133,11 +133,6 @@ const MainPage = () => {
           />
         </picture>
       </div>
-      {/*       <img
-        className="main-page__img"
-        srcSet={mainPhoto}
-        alt="Half face of a man with dark background"
-      /> */}
       <Sections />
     </main>
   );

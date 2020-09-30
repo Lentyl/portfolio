@@ -18,15 +18,8 @@ const CanvasAnimation = () => {
     >
       <ambientLight intensity={0.5} />
       <spotLight
-        intensity={0.5}
-        position={[50, 30, 50]}
-        angle={0.4}
-        penumbra={1}
-        castShadow
-      />
-      <spotLight
-        intensity={0.5}
-        position={[-50, -30, -50]}
+        intensity={0.4}
+        position={[-40, -10, 60]}
         angle={0.4}
         penumbra={1}
         castShadow
