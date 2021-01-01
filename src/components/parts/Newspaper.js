@@ -25,7 +25,7 @@ const Newspaper = () => {
     const contactDistance = document
       .querySelector(".sections__division-contact-wrapper")
       .getBoundingClientRect().top;
-    const dist = window.scrollY + contactDistance;
+    const dist = window.scrollY + contactDistance - 80;
 
     let play = true;
 
@@ -43,9 +43,8 @@ const Newspaper = () => {
   }, []);
   return (
     <div
-      className={`contact__newspaper-container ${
-        newsStart && "contact__newspaper-container-spin"
-      }`}
+      className={`contact__newspaper-container ${newsStart && "contact__newspaper-container-spin"
+        }`}
     >
       <h2 className="contact__newspaper-container-title news">
         GDAŃSK DAILY POST
@@ -85,7 +84,7 @@ const Newspaper = () => {
         <div className="contact__newspaper-media-container">
           <a
             className="contact__newspaper-media-link"
-            href="mailto:m.b.podgorski1984@gmail.com?subject=Wiadomość%20ze%20strony%20podgorskiportfolio.pl&bcc=m.b.podgorski1984@gmail.com&body=Cześć Mariusz,"
+            href="mailto:m.b.podgorski1984@gmail.com?subject=Wiadomość%20ze%20strony%20podgorskiportfolio.pl&body=Cześć Mariusz,"
           >
             <FaEnvelope />
           </a>

@@ -21,25 +21,31 @@ const MainPage = () => {
     const font_size = 10;
     const columns = c.width / font_size;
     const drops = [];
+
+    let resetTime = 0;
     const matrixEffect = () => {
       for (var x = 0; x < columns; x++) drops[x] = 1;
 
-      function draw() {
-        ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
-        ctx.fillRect(0, 0, c.width, c.height);
+      function draw(currentTime) {
+        if (currentTime - resetTime > 17) {
+          resetTime = currentTime;
 
-        ctx.fillStyle = "#0F0";
-        ctx.font = font_size + "px arial";
+          ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+          ctx.fillRect(0, 0, c.width, c.height);
 
-        for (let i = 0; i < drops.length; i++) {
-          let text = matrix[Math.floor(Math.random() * matrix.length)];
+          ctx.fillStyle = "#0F0";
+          ctx.font = font_size + "px arial";
 
-          ctx.fillText(text, i * font_size, drops[i] * font_size);
+          for (let i = 0; i < drops.length; i++) {
+            let text = matrix[Math.floor(Math.random() * matrix.length)];
 
-          if (drops[i] * font_size > c.height && Math.random() > 0.975)
-            drops[i] = 0;
+            ctx.fillText(text, i * font_size, drops[i] * font_size);
 
-          drops[i]++;
+            if (drops[i] * font_size > c.height && Math.random() > 0.975)
+              drops[i] = 0;
+
+            drops[i]++;
+          }
         }
         requestAnimationFrame(draw);
       }
@@ -98,8 +104,8 @@ const MainPage = () => {
                 muted
               ></video>
             ) : (
-              ""
-            )}
+                ""
+              )}
             <div className="main-page__new-line-3">
               <span className="main-page__welcome-letters">w</span>
               <span className="main-page__welcome-letters">e</span>
@@ -116,8 +122,8 @@ const MainPage = () => {
             </div>
           </section>
         ) : (
-          ""
-        )}
+            ""
+          )}
       </div>
       <div className="main-page__matrix-image-container">
         <canvas className="main-page__matrix-image-canvas"></canvas>
