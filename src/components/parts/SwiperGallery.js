@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Swiper from "swiper";
+//import praktycznyRodzic from "../../img/praktyczny-rodzic.webp"
 
 const SwiperGallery = () => {
   useEffect(() => {
@@ -39,7 +40,8 @@ const SwiperGallery = () => {
               tincidunt ut libero. Aenean feugiat non eros quis feugiat.
             </p>
           </div>
-          <div className="swiper-slide swiper__project-container swiper__slide1-position"></div>
+          <div className="swiper-slide swiper__project-container swiper__slide1-position" style={{backgroundColor: 'transparent'}}>
+          </div>
         </div>
         <div className="swiper-slide swiper-slide-active">
           <div

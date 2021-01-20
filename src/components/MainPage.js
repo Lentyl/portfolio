@@ -96,16 +96,14 @@ const MainPage = () => {
         </div>
         {playSmoke ? (
           <section className="main-page__baner">
-            {videoVisible ? (
+            {videoVisible && (
               <video
                 className="main-page__smoke-video"
                 autoPlay={true}
                 src={smoke}
                 muted
               ></video>
-            ) : (
-                ""
-              )}
+            )}
             <div className="main-page__new-line-3">
               <span className="main-page__welcome-letters">w</span>
               <span className="main-page__welcome-letters">e</span>

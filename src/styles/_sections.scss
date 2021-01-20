@@ -20,6 +20,18 @@
       font-family: 'Noto Sans JP', sans-serif;
     }
 
+    .sections__division-text{
+      padding: 10px 6px;
+      text-align: justify;
+
+      @media screen and (min-width: map-get($breakpoins, lg)) {
+        
+        font-size:24px ;
+        padding: 20px 16px;
+      }
+  
+    }
+
     .sections__division-me-bg {
       position: relative;
       width: 100%;

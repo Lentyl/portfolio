@@ -7,7 +7,7 @@ import {
   FaPhoneAlt,
   FaDownload,
 } from "react-icons/fa";
-import Pdf from "../../img/CurriculumVitae.pdf";
+import Pdf from "../../img/MariuszPodgorskiCV-English.pdf";
 import Extra from "../../mp3/Extra-Read-All-About-It.mp3";
 
 import { Howl } from "howler";
@@ -75,10 +75,10 @@ const Newspaper = () => {
         </p>
 
         <div className="contact__newspaper-media-container">
-          <a className="contact__newspaper-tel-link" href="tel:+44795-537-1215">
+          <a className="contact__newspaper-tel-link" href="tel:+48795-702-478">
             <FaPhoneAlt className="contact__newspaper-tel-button" />
           </a>
-          +44 795-537-1215
+          +48 795-702-478
         </div>
 
         <div className="contact__newspaper-media-container">

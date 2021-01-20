@@ -63,6 +63,11 @@
         }
 
         .swiper__project-container {
+            background-image: url("../img/praktyczny-rodzic.webp");
+            background-repeat: no-repeat;
+            background-size:contain;
+            max-width: 600px;
+            max-height: 450px;
             width: 25%;
             height: 50%;
             position: absolute;
