@@ -40,8 +40,9 @@ const SwiperGallery = () => {
               tincidunt ut libero. Aenean feugiat non eros quis feugiat.
             </p>
           </div>
-          <div className="swiper-slide swiper__project-container swiper__slide1-position" style={{backgroundColor: 'transparent'}}>
-          </div>
+            <a className="swiper-slide swiper__project-container swiper__slide1-position"  href="https://praktyczny-rodzic.herokuapp.com">
+              {/* <div className="swiper-slide swiper__project-container "></div> */}
+            </a> 
         </div>
         <div className="swiper-slide swiper-slide-active">
           <div

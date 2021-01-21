@@ -66,20 +66,13 @@
             background-image: url("../img/praktyczny-rodzic.webp");
             background-repeat: no-repeat;
             background-size:contain;
+            background-position: center;
             max-width: 600px;
             max-height: 450px;
             width: 25%;
-            height: 50%;
+            height: 58vw;
             position: absolute;
             bottom: 50px;
-
-            @media screen and (min-width: map-get($breakpoins, xl)) {
-                width: 22%;
-
-            }
-
-
-            background-color: rgba(255, 255, 255, 0.2);
         }
 
         .swiper__slide1-position {
