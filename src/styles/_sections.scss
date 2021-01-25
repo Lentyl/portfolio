@@ -23,6 +23,7 @@
     .sections__division-text{
       padding: 10px 6px;
       text-align: justify;
+       line-height: 26px; 
 
       @media screen and (min-width: map-get($breakpoins, lg)) {
         

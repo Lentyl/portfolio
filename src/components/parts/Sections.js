@@ -21,8 +21,8 @@ const division = sectionsList.map((divisionItem) => {
         >
           {divisionItem.title}
         </header>
-        <div className="sections__division-me-bg"></div>
         <p className="sections__division-text">{divisionItem.text}</p>
+        <div className="sections__division-me-bg"></div>
       </li>
     );
   } else if (divisionItem.title === "Skills") {
@@ -35,8 +35,8 @@ const division = sectionsList.map((divisionItem) => {
         <header className="sections__division-title">
           {divisionItem.title}
         </header>
-        <div className="sections__division-skills-bg"></div>
         <p className="sections__division-text">{divisionItem.text}</p>
+        <div className="sections__division-skills-bg"></div>
         <div className="sections__division-blocks-wrapper">
           <CanvasAnimation />
         </div>
