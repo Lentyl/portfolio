@@ -14,7 +14,7 @@ const SECTIONS = [
     ),
     new Section(
         'Skills',
-        "I designed website using a wide range of technologies and solutions that I studied. I feel much more confident with them now and became a better fit for the Web Developer role. When I design and build application I use a wide range of new technologies ad libraries that I haven't used before. Thanks to this approach I expand my knowledge and familiarise myself with new tools.",
+        "I designed website using a wide range of technologies and solutions that I studied. I feel much more confident with them now and became a better fit for the Web Developer role. When I design and build application I use new technologies and libraries that I haven't used before. Thanks to this approach I expand my knowledge and familiarise myself with new tools.",
         ''
     ),
     new Section(

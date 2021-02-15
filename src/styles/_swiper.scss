@@ -80,8 +80,12 @@
         .swiper__slide1-position {
             left: 4%;
 
+            @media screen and (min-width: map-get($breakpoins, lg)) {
+                left: 8%
+            }
+
             @media screen and (min-width: map-get($breakpoins, xl)) {
-                right: 68%
+                left: 16%
             }
         }
 

@@ -9,19 +9,17 @@ import {
 } from "react-icons/fa";
 import Pdf from "../../img/MariuszPodgorskiCV-English.pdf";
 import Extra from "../../mp3/Extra-Read-All-About-It.mp3";
-
-import { Howl } from "howler";
+import ReactHowler from 'react-howler';
 
 const Newspaper = () => {
   const [date, setDate] = useState(null);
+ 
 
   const [newsStart, setNewsStart] = useState(false);
 
   useEffect(() => {
     //sound
-    const sound = new Howl({
-      src: [Extra],
-    });
+ 
     const contactDistance = document
       .querySelector(".sections__division-contact-wrapper")
       .getBoundingClientRect().top;
@@ -32,7 +30,6 @@ const Newspaper = () => {
     document.addEventListener("scroll", () => {
       if (window.scrollY >= dist && play === true) {
         setNewsStart(true);
-        sound.play();
         play = false;
       }
     });
@@ -64,7 +61,7 @@ const Newspaper = () => {
         There's plenty going on across the city from developers and testers area of interest.
         New software is made by creative and hardworking people that are coming to the market. 
         One of them is Mariusz Podgorski. His current education is closely related to software development
-        which is necessary for effective acting in the range of duties that are required on that profesions. 
+        which is necessary for effective acting in the range of duties that are required on that profesionss. 
         Main reason why he decided to start looking for a job as Web Developer / Tester is very strong will of finding an accurate occupation for his interests and skills.
         He is looking for a company where he would be able to dedicate his time, effort and satisfy his ambition.
         If You are interested in his person do not hesitate, he will be grateful for opportunity of an interview to show the full spectrum of his skills.
@@ -79,9 +76,12 @@ const Newspaper = () => {
         It is also characteristic for him that he is consistent in action and responsible at work.
         Surely he fulfill your requirements if You give him the opportunity to cooperate with You.
         Do not waste another minute, contact details are below.
-
         </p>
-
+        <ReactHowler
+        src={Extra}
+        playing={newsStart?true:false}
+        preload={true}
+      />
         <div className="contact__newspaper-media-container">
           <a className="contact__newspaper-tel-link" href="tel:+48795-702-478">
             <FaPhoneAlt className="contact__newspaper-tel-button" />
