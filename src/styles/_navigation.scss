@@ -84,7 +84,6 @@
     background-color: $main-color;
     transition: 1s 0.1s linear;
 
-
     .navigation__inner-lid {
       position: absolute;
       bottom: -2px;
@@ -92,7 +91,6 @@
       background-color: black;
       width: 53%;
       height: 103%;
-
     }
   }
 
@@ -129,21 +127,17 @@
   position: absolute;
   bottom: 0;
   left: 0;
-
 }
 
 .navigation__element-link-visible:hover {
-  animation: hov .5s forwards;
+  animation: hov 0.5s forwards;
 }
 
 @keyframes hov {
   100% {
     color: $additives-color;
   }
-
 }
-
-
 
 .navigation__element-link:nth-child(1) {
   top: $main-spacing * 0.5;
@@ -194,7 +188,6 @@
 }
 
 .navigation__desktop-container {
-
   display: none;
 
   @media screen and (min-width: map-get($breakpoins, md)) {
@@ -204,8 +197,6 @@
     top: 25px;
     right: 50px;
     z-index: 1;
-
-
 
     .navigation__desktop-link {
       text-decoration: none;
@@ -245,14 +236,11 @@
           width: 100%;
           height: 100%;
           border: 1px solid $secondary-color;
-
         }
-
       }
 
       .navigation__desktop-layer-container:hover {
         transform: rotate(-35deg) skew(25deg) translate(20px, -20px);
-        transition: .4s;
       }
 
       .navigation__desktop-layer:nth-child(1) {
@@ -271,55 +259,52 @@
         border: 1px solid green;
       }
 
-      .navigation__desktop-layer-container:hover .navigation__desktop-layer:nth-child(1) {
-
-        opacity: .8;
+      .navigation__desktop-layer-container:hover
+        .navigation__desktop-layer:nth-child(1) {
+        opacity: 0.8;
         transform: translate(-5px, 5px);
-        transition: .4s;
+        transition: 0.4s;
       }
 
-      .navigation__desktop-layer-container:hover .navigation__desktop-layer:nth-child(2) {
+      .navigation__desktop-layer-container:hover
+        .navigation__desktop-layer:nth-child(2) {
         transform: translate(-10px, 10px);
-        opacity: .6;
-        transition: .4s;
+        opacity: 0.6;
+        transition: 0.4s;
       }
 
-      .navigation__desktop-layer-container:hover .navigation__desktop-layer:nth-child(3) {
+      .navigation__desktop-layer-container:hover
+        .navigation__desktop-layer:nth-child(3) {
         transform: translate(-15px, 15px);
-        opacity: .4;
-        transition: .4s;
-
+        opacity: 0.4;
+        transition: 0.4s;
       }
 
-      .navigation__desktop-layer-container:hover .navigation__desktop-layer:nth-child(4) {
-        opacity: .2;
+      .navigation__desktop-layer-container:hover
+        .navigation__desktop-layer:nth-child(4) {
+        opacity: 0.2;
         transform: translate(-20px, 20px);
-        transition: .4s;
+        transition: 0.4s;
       }
 
       .navigation__desktop-element {
         position: relative;
         top: -20px;
         text-align: center;
-        transition: .8s;
+        transition: 0.8s;
         opacity: 0;
         color: $additives-color;
         z-index: 0;
       }
-
-
     }
 
-    .navigation__desktop-layer-container:hover~.navigation__desktop-element {
+    .navigation__desktop-layer-container:hover ~ .navigation__desktop-element {
       opacity: 1;
       transform: translateY(15px);
-
     }
 
     @media screen and (min-width: map-get($breakpoins, xl)) {
       margin: 0 100px;
     }
   }
-
-
 }

@@ -37,8 +37,15 @@ const SwiperGallery = () => {
             </p>
           </div>
             <a className="swiper-slide swiper__project-container swiper__slide1-position"  href="https://praktyczny-rodzic.herokuapp.com">
-              {/* <div className="swiper-slide swiper__project-container "></div> */}
             </a> 
+            <div className='swiper-slide__btn-container'>
+              <a href="https://praktyczny-rodzic.herokuapp.com">
+            <button className='swiper-slide__btn-live'>Live</button>
+            </a>
+            <a href="https://github.com/Lentyl/praktyczny-rodzic">  
+            <button className='swiper-slide__btn-code'>Code</button>
+            </a>
+            </div>
         </div>
         <div className="swiper-slide swiper-slide-active">
           <div

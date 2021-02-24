@@ -6,7 +6,7 @@ import { useCannon } from "./useCannon";
 
 import cube1TextureURL from "../../../img/small-cubes/css-logo.jpg";
 import cube2TextureURL from "../../../img/small-cubes/firebase-logo.jpg";
-import cube3TextureURL from "../../../img/small-cubes/javaScript.jpg";
+import cube3TextureURL from "../../../img/small-cubes/typeScript.jpg";
 import cube4TextureURL from "../../../img/small-cubes/mdb-logo.png";
 import cube5TextureURL from "../../../img/small-cubes/html-logo.jpg";
 import cube6TextureURL from "../../../img/small-cubes/node-logo.jpg";

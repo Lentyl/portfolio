@@ -1,113 +1,185 @@
 .swiper-container {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  display: flex;
 
+  .parallax-bg {
+    position: absolute;
+    background-image: url("../img/mobileProjects_460-751.jpg");
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    @media screen and (min-width: map-get($breakpoins, sm)) {
+      background-image: url("../img/mobileProjects_800-859.jpg");
+    }
+
+    @media screen and (min-width: map-get($breakpoins, lg)) {
+      background-image: url("../img/desktopProjects_1280-609.jpg");
+    }
+
+    @media screen and (min-width: map-get($breakpoins, xl)) {
+      background-image: url("../img/desktopProjects_1980-940.jpg");
+    }
+  }
+
+  .swiper-wrapper {
     position: relative;
-    width: 100%;
-    height: 800px;
     display: flex;
 
+    .swiper-slide {
+      width: 100%;
+      height: 100%;
+      font-size: 18px;
+      color: #fff;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 40px 60px;
 
-    .parallax-bg {
+      .swiper-slide__btn-container {
         position: absolute;
-        background-image: url('../img/mobileProjects_460-751.jpg');
-        left: 0;
-        top: 0;
-        width: 130%;
-        height: 100%;
-        -webkit-background-size: cover;
-        background-size: cover;
-        background-position: center;
-        overflow: hidden;
+        left: 7%;
+        bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 600px;
+        width: 20%;
 
-        @media screen and (min-width: map-get($breakpoins, sm)) {
-            background-image: url("../img/mobileProjects_800-859.jpg");
-        }
+        /* xs: 360px,
+    sm: 480px,
+    md: 640px,
+    lg: 800px,
+    xl:1280px, */
 
-        @media screen and (min-width: map-get($breakpoins, lg)) {
-            background-image: url("../img/desktopProjects_1280-609.jpg");
+        @media screen and (min-width: map-get($breakpoins, xs)) {
+          bottom: 16px;
         }
 
         @media screen and (min-width: map-get($breakpoins, xl)) {
-            background-image: url("../img/desktopProjects_1980-940.jpg");
+          left: 8%;
         }
 
+        .swiper-slide__btn-live {
+          font-weight: bold;
+          font-size: 20px;
+          background-color: transparent;
+          color: $additives-color;
+          border: 2px solid $secondary-color;
+          border-radius: 5px;
+          padding: 6px 14px;
+          cursor: pointer;
+
+          transition: 0.6s;
+          @media screen and (min-width: map-get($breakpoins, xs)) {
+            bottom: 20px;
+          }
+
+          @media screen and (min-width: map-get($breakpoins, sm)) {
+            padding: 10px 20px;
+          }
+        }
+
+        .swiper-slide__btn-code {
+          font-weight: bold;
+          font-size: 20px;
+          background-color: transparent;
+          color: $secondary-color;
+          border: 2px solid $additives-color;
+          border-radius: 5px;
+          padding: 6px 14px;
+          transition: 0.6s;
+          cursor: pointer;
+
+          @media screen and (min-width: map-get($breakpoins, xs)) {
+            bottom: 20px;
+          }
+
+          @media screen and (min-width: map-get($breakpoins, sm)) {
+            padding: 10px 20px;
+          }
+        }
+
+        .swiper-slide__btn-live:hover {
+          color: $secondary-color;
+          border: 2px solid $additives-color;
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .swiper-slide__btn-code:hover {
+          color: $additives-color;
+          border: 2px solid $secondary-color;
+          background-color: rgba(250, 250, 250, 0.1);
+        }
+      }
     }
 
-    .swiper-wrapper {
-        position: relative;
-        display: flex;
-
-        .swiper-slide {
-            width: 100%;
-            height: 100%;
-            font-size: 18px;
-            color: #fff;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            padding: 40px 60px;
-        }
-
-        .swiper-slide .title {
-
-            font-size: 41px;
-            font-weight: 300;
-        }
-
-        .swiper-slide .subtitle {
-            padding: 8px 0;
-            font-size: 21px;
-            max-width: 400px;
-        }
-
-        .swiper-slide .text {
-            font-size: 14px;
-            max-width: 400px;
-            line-height: 1.3;
-        }
-
-        .swiper__project-container {
-            background-image: url("../img/praktyczny-rodzic.webp");
-            background-repeat: no-repeat;
-            background-size:contain;
-            background-position: center;
-            max-width: 600px;
-            max-height: 450px;
-            width: 25%;
-            height: 58vw;
-            position: absolute;
-            bottom: 50px;
-        }
-
-        .swiper__slide1-position {
-            left: 4%;
-
-            @media screen and (min-width: map-get($breakpoins, lg)) {
-                left: 8%
-            }
-
-            @media screen and (min-width: map-get($breakpoins, xl)) {
-                left: 16%
-            }
-        }
-
-        .swiper__slide2-position {
-            left: 37%;
-
-            @media screen and (min-width: map-get($breakpoins, xl)) {
-                right: 35%
-            }
-        }
-
-        .swiper__slide3-position {
-            left: 71%;
-
-            @media screen and (min-width: map-get($breakpoins, xl)) {
-                right: 1%
-            }
-        }
-
+    .swiper-slide .title {
+      font-size: 41px;
+      font-weight: 300;
     }
 
+    .swiper-slide .subtitle {
+      padding: 8px 0;
+      font-size: 21px;
+      max-width: 400px;
+    }
 
+    .swiper-slide .text {
+      font-size: 14px;
+      max-width: 400px;
+      line-height: 1.3;
+    }
 
+    .swiper__project-container {
+      background-image: url("../img/praktyczny-rodzic.webp");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      max-width: 600px;
+      max-height: 450px;
+      width: 25%;
+      height: 58vw;
+      position: absolute;
+      bottom: 60px;
 
+      @media screen and (min-width: map-get($breakpoins, xs)) {
+        bottom: 80px;
+      }
+    }
+
+    .swiper__slide1-position {
+      left: 4%;
+
+      @media screen and (min-width: map-get($breakpoins, lg)) {
+        left: 8%;
+      }
+
+      @media screen and (min-width: map-get($breakpoins, xl)) {
+        left: 16%;
+      }
+    }
+
+    .swiper__slide2-position {
+      left: 37%;
+
+      @media screen and (min-width: map-get($breakpoins, xl)) {
+        right: 35%;
+      }
+    }
+
+    .swiper__slide3-position {
+      left: 71%;
+
+      @media screen and (min-width: map-get($breakpoins, xl)) {
+        right: 1%;
+      }
+    }
+  }
 }
