@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Swiper from "swiper";
+import SwiperComponent from "./SwiperComponent";
 //import praktycznyRodzic from "../../img/praktyczny-rodzic.webp"
 
 const SwiperGallery = () => {
@@ -23,78 +24,45 @@ const SwiperGallery = () => {
       <div className="parallax-bg" data-swiper-parallax="-23%"></div>
       <div className="swiper-wrapper">
         <div className="swiper-slide">
-          <div className="title" data-swiper-parallax="-300">
-            Praktyczny Rodzic.
-          </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-          <p>Blog website with small CMS, where you can add articles, confirm comments and read messages from users.</p>
-          </div>
-          <div className="text" data-swiper-parallax="-100">
-            <p>
-           
-            Kids are the main subject of this website and everything related to them. Handy tips that can help parents to survive another day.
-            Access to admin panel is hidden after typing praktyczny-rodzic.herokuapp.com/admin or login type user: maniek, password: 123.
-            </p>
-          </div>
-            <a className="swiper-slide swiper__project-container swiper__slide1-position"  href="https://praktyczny-rodzic.herokuapp.com">
-            </a> 
-            <div className='swiper-slide__btn-container'>
-              <a href="https://praktyczny-rodzic.herokuapp.com">
-            <button className='swiper-slide__btn-live'>Live</button>
-            </a>
-            <a href="https://github.com/Lentyl/praktyczny-rodzic">  
-            <button className='swiper-slide__btn-code'>Code</button>
-            </a>
-            </div>
+          <SwiperComponent
+            title="farm-market"
+            subtitle="Trading web application where you can sell and buy fruits and vegetables.
+            Clients have their own panel where they can check the orders, edit contact details, search the best offers."
+            text="We all know how hard times became for farmers. This application faced their demand that open wider access to new clients.
+            Strongest site of this app is geolocation with google maps, that helps client to find closest provider."
+            hostHref="https://farm-market-app-74e39.web.app/"
+            githubHref="https://github.com/Lentyl/farm-m"
+            slideNumber={1}
+          />
         </div>
         <div className="swiper-slide swiper-slide-active">
-          <div
-            className="title"
-            data-swiper-parallax="-300"
-            data-swiper-parallax-opacity="0"
-          >
-            Slide 2
-          </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-            Subtitle
-          </div>
-          <div className="text" data-swiper-parallax="-100">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-            </p>
-          </div>
-          <div className="swiper-slide swiper__project-container swiper__slide2-position"></div>
+          <SwiperComponent
+            title="Praktyczny Rodzic"
+            subtitle="Blog website with small CMS, where you can add articles, confirm comments and read messages from users."
+            text="Kids are the main subject of this website and everything related to
+          them. Handy tips that can help parents to survive another day. Access to
+          admin panel is hidden after typing praktyczny-rodzic.herokuapp.com/admin
+          or login type user: maniek, password: 123."
+            hostHref="https://praktyczny-rodzic.herokuapp.com"
+            githubHref="https://github.com/Lentyl/praktyczny-rodzic"
+            slideNumber={2}
+          />
         </div>
         <div className="swiper-slide">
-          <div className="title" data-swiper-parallax="-300">
-            Slide 3
-          </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-            Subtitle
-          </div>
-          <div className="text" data-swiper-parallax="-100">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-            </p>
-          </div>
-          <div className="swiper-slide swiper__project-container swiper__slide3-position"></div>
+          <SwiperComponent
+            title="Praktyczny Rodzic."
+            subtitle="Blog website with small CMS, where you can add articles, confirm comments and read messages from users."
+            text="Kids are the main subject of this website and everything related to
+          them. Handy tips that can help parents to survive another day. Access to
+          admin panel is hidden after typing praktyczny-rodzic.herokuapp.com/admin
+          or login type user: maniek, password: 123."
+            hostHref="https://praktyczny-rodzic.herokuapp.com"
+            githubHref="https://github.com/Lentyl/praktyczny-rodzic"
+            slideNumber={3}
+          />
         </div>
       </div>
-
       <div className="swiper-pagination swiper-pagination-white"></div>
-
       <div className="swiper-button-prev swiper-button-white"></div>
       <div className="swiper-button-next swiper-button-white"></div>
     </div>
