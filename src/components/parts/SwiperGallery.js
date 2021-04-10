@@ -50,14 +50,11 @@ const SwiperGallery = () => {
         </div>
         <div className="swiper-slide">
           <SwiperComponent
-            title="Praktyczny Rodzic."
-            subtitle="Blog website with small CMS, where you can add articles, confirm comments and read messages from users."
-            text="Kids are the main subject of this website and everything related to
-          them. Handy tips that can help parents to survive another day. Access to
-          admin panel is hidden after typing praktyczny-rodzic.herokuapp.com/admin
-          or login type user: maniek, password: 123."
-            hostHref="https://praktyczny-rodzic.herokuapp.com"
-            githubHref="https://github.com/Lentyl/praktyczny-rodzic"
+            title="Social Web app"
+            subtitle="coming soon"
+            text=""
+            hostHref=""
+            githubHref=""
             slideNumber={3}
           />
         </div>

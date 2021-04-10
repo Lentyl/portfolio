@@ -1,9 +1,9 @@
 import React from "react";
-
 import SECTIONS from "../../data/sections";
 import CanvasAnimation from "./three-fiber/CanvasAnimation";
 import SwiperGallery from "./SwiperGallery";
 import Newspaper from "./Newspaper";
+import {GiSideswipe} from "react-icons/gi"
 
 const sectionsList = SECTIONS;
 
@@ -60,7 +60,7 @@ const division = sectionsList.map((divisionItem) => {
         key={divisionItem.title}
       >
         <header className="sections__division-title">
-          {divisionItem.title}
+          {divisionItem.title} <div className="sections__division-subtitle"><span>swipe</span> <GiSideswipe/></div>
         </header>
         <SwiperGallery />
       </li>
