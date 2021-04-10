@@ -12,6 +12,7 @@
   .swiper-component__title {
     font-size: 30px;
     font-weight: 300;
+    margin-top: 8px;
     @media screen and (min-width: map-get($breakpoins, xs)) {
       font-size: 32px;
     }
