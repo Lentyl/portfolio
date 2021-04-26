@@ -58,23 +58,27 @@ const Newspaper = () => {
         </h4>
         <img className="contact__newspaper-giff" src={newsGiff} alt="" />
         <p className="contact__newspaper-article news">
-        There's plenty going on across the city from developers and testers area of interest.
+        There's plenty going on across the city in the developers and testers area of interest. 
         New software is made by creative and hardworking people that are coming to the market. 
         One of them is Mariusz Podgorski. His current education is closely related to software development
-        which is necessary for effective acting in the range of duties that are required on that profesionss. 
-        Main reason why he decided to start looking for a job as Web Developer / Tester is very strong will of finding an accurate occupation for his interests and skills.
-        He is looking for a company where he would be able to dedicate his time, effort and satisfy his ambition.
-        If You are interested in his person do not hesitate, he will be grateful for opportunity of an interview to show the full spectrum of his skills.
-        During the education he became familiar with many kinds of software testing which contains syllabus ISTQB.
-        This can make up a good base for future cooperation.
-        He was able to use his theoretical knowledge in projects that you can see above.
-        His command of English let him easily read documentation, books and communicate with colleagues and customers at work. 
-        I am sure that he will be able to follow the duties needed on this positions.
-        His trumps are also easiness in communicating with people that have different opinion and represent divers professions, and also cooperating group skills.
-        He is a person who mark himself concrete targets and know how to adapt it to team problems.
-        The feature of analytical thinking which is necessary to execute complicated tasks is one of his biggest strenghts.
-        It is also characteristic for him that he is consistent in action and responsible at work.
-        Surely he fulfill your requirements if You give him the opportunity to cooperate with You.
+        which is necessary for being effective in the range of duties that are required in that profession.
+        The main reason why he decided to start looking for a job as Web Developer / Tester is a very strong
+        will of finding an accurate occupation for his interests and skills. He is looking for a company
+        where he would be able to dedicate his time, effort and satisfy his ambition. If you are interested
+        in his skills do not hesitate, he will be grateful for an opportunity to meet you and show the full spectrum of his skills.
+        </p>
+        <p className="contact__newspaper-article news">
+        During his education he became familiar with many kinds of software testing which contains syllabus ISTQB.
+        This can form a good base for future cooperation. He was able to use his theoretical knowledge in the projects
+        that you can see above. His command of English lets him easily read documentation, books and communicate with colleagues
+        and customers at work. I am sure that he will be able to follow the duties needed of any future positions.
+        His key strengths are easiness in communicating with people that have different opinions and representing diverse professions,
+        whilst also keen to  cooperate in a group setting. He is a person who gives himself firm targets and knows how to adapt it to team problems.
+        One of his biggest strengths is analytical thinking, necessary to execute complicated tasks.
+        It is also characteristic for him that he is consistent in his approach and is responsible at work.
+        He will fulfill your requirements if given the opportunity to cooperate with you. 
+        </p>
+        <p className="contact__newspaper-article news">
         Do not waste another minute, contact details are below.
         </p>
         <ReactHowler

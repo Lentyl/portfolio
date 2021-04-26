@@ -39,7 +39,7 @@
     }
 
     .news {
-      padding: 2px 8px;
+      padding: 6px 8px;
       font-family: "Playfair Display", serif;
       @media screen and (min-width: map-get($breakpoins, xl)) {
         padding: 10px 20px;
@@ -70,11 +70,13 @@
     }
 
     .contact__newspaper-article {
+      text-indent: 20px;
       text-align: justify;
       font-size: 18px;
       line-height: 26px;
 
       @media screen and (min-width: map-get($breakpoins, xl)) {
+        text-indent: 40px;
         font-size: 20px;
         line-height: 30px;
       }
