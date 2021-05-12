@@ -16,7 +16,7 @@
     "react-id-swiper": "^4.0.0",
     "react-scripts": "3.4.1",
     "react-three-fiber": "^4.2.12",
-    "swiper": "^5.4.5",
+    "swiper": "^6.5.1",
     "three": "^0.117.1",
     "video-react": "^0.14.1"
   },
