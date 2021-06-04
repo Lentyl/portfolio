@@ -7,6 +7,7 @@ import {
   FaPhoneAlt,
   FaDownload,
 } from "react-icons/fa";
+import Certificate from '../Certificate'
 import Pdf from "../../img/MariuszPodgorskiCV-English.pdf";
 import Extra from "../../mp3/Extra-Read-All-About-It.mp3";
 import ReactHowler from 'react-howler';
@@ -69,6 +70,7 @@ const Newspaper = () => {
         </p>
         <p className="contact__newspaper-article news">
         During his education he became familiar with many kinds of software testing which contains syllabus ISTQB.
+        He proved his knowledge getting <Certificate/>. 
         This can form a good base for future cooperation. He was able to use his theoretical knowledge in the projects
         that you can see above. His command of English lets him easily read documentation, books and communicate with colleagues
         and customers at work. I am sure that he will be able to follow the duties needed of any future positions.

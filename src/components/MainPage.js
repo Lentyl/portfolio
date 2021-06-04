@@ -105,16 +105,23 @@ const MainPage = () => {
               ></video>
             )}
             <div className="main-page__new-line-3">
-              <span className="main-page__welcome-letters">w</span>
+              <span className="main-page__welcome-letters">W</span>
               <span className="main-page__welcome-letters">e</span>
               <span className="main-page__welcome-letters">b</span>
-              <span className="main-page__welcome-letters">d</span>
+              <span className="main-page__welcome-letters">D</span>
               <span className="main-page__welcome-letters">e</span>
               <span className="main-page__welcome-letters">v</span>
               <span className="main-page__welcome-letters">e</span>
               <span className="main-page__welcome-letters">l</span>
               <span className="main-page__welcome-letters">o</span>
               <span className="main-page__welcome-letters">p</span>
+              <span className="main-page__welcome-letters">e</span>
+              <span className="main-page__welcome-letters">r</span>
+              <span className="main-page__welcome-letters">/</span>
+              <span className="main-page__welcome-letters">T</span>
+              <span className="main-page__welcome-letters">e</span>
+              <span className="main-page__welcome-letters">s</span>
+              <span className="main-page__welcome-letters">t</span>
               <span className="main-page__welcome-letters">e</span>
               <span className="main-page__welcome-letters">r</span>
             </div>

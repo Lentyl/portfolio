@@ -1,6 +1,7 @@
 import React from "react";
 import SECTIONS from "../../data/sections";
 import CanvasAnimation from "./three-fiber/CanvasAnimation";
+import Certificate from "../Certificate"
 import SwiperGallery from "./SwiperGallery";
 import Newspaper from "./Newspaper";
 import {GiSideswipe} from "react-icons/gi"
@@ -21,7 +22,8 @@ const division = sectionsList.map((divisionItem) => {
         >
           {divisionItem.title}
         </header>
-        <p className="sections__division-text">{divisionItem.text}</p>
+        <p className="sections__division-text">The foundation of my continuous development is self studying. I am a stakeholder orientated and motivated individual, who can provide a high level website development, testing and maintenance service.
+        I proved my knowledge about software quality by getting {<Certificate/>}. I am proactive, eager to lend a hand and learn from others so that I can engage with all activities. I deliver an excellent web development experience utilising the latest technologies. I am keen to join an organisation where I will be able to develop and expand my skillset.</p>
         <div className="sections__division-me-bg"></div>
       </li>
     );
