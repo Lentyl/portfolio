@@ -52,7 +52,7 @@ const Newspaper = () => {
       </div>
       <div className="contact__newspaper-article-wrapper">
         <h3 className="contact__newspaper-article-title news">
-          New developer on the market
+          New developer/Tester on the market
         </h3>
         <h4 className="contact__newspaper-article-subtitle news">
           Quality & Creativity
