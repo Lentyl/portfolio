@@ -1,6 +1,4 @@
 import Section from '../models/section';
-import CT_FL from '../img//MARIUSZ_PODGÓRSKI_CTFL_2021_EN.pdf'
-import Certificate from '../components/Certificate'
 import {
     FaLaptopCode,
     FaUser,
