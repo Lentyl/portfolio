@@ -5,7 +5,7 @@ import SwiperComponent from "./SwiperComponent";
 
 const SwiperGallery = () => {
   useEffect(() => {
-    new Swiper(".swiper-container", {
+    const swiper = new Swiper(".swiper-container", {
       speed: 500,
       parallax: true,
       pagination: {
@@ -17,6 +17,7 @@ const SwiperGallery = () => {
         prevEl: ".swiper-button-prev",
       },
     });
+    return () => swiper.destroy(true, true);
   }, []);
 
   return (

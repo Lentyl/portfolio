@@ -7,7 +7,7 @@ import React, {
 } from 'react'
 import {
     useFrame
-} from 'react-three-fiber'
+} from '@react-three/fiber'
 
 // Cannon-world context provider
 const context = React.createContext()
@@ -24,13 +24,14 @@ export function Provider({
 
         const dist = window.scrollY + canvasDistance;
 
-        document.addEventListener("scroll", () => {
-
+        const handleScroll = () => {
             if (window.scrollY >= dist - 150) {
                 world.gravity.set(0, 0, -25)
             }
-        });
+        };
 
+        document.addEventListener("scroll", handleScroll);
+        return () => document.removeEventListener("scroll", handleScroll);
     }, [world])
 
     // Run world stepper every frame
@@ -46,22 +47,22 @@ export function Provider({
 }
 
 // Custom hook to maintain a world physics body
-export function useCannon({
-    ...props
-}, fn, deps = []) {
+export function useCannon(props, fn) {
     const ref = useRef()
     // Get cannon world object
     const world = useContext(context)
     // Instanciate a physics body
-    const [body] = useState(() => new CANNON.Body(props))
-    useEffect(() => {
-        // Call function so the user can add shapes
+    const [body] = useState(() => {
+        const body = new CANNON.Body(props)
         fn(body)
+        return body
+    })
+    useEffect(() => {
         // Add body to world on mount
         world.addBody(body)
         // Remove body on unmount
         return () => world.removeBody(body)
-    }, deps)
+    }, [world, body])
 
     useFrame(() => {
         if (ref.current) {

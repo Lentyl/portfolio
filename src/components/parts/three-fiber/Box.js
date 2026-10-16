@@ -1,6 +1,6 @@
 import React from "react";
 import * as CANNON from "cannon";
-import { useLoader } from "react-three-fiber";
+import { useLoader } from "@react-three/fiber";
 import { TextureLoader } from "three";
 import { useCannon } from "./useCannon";
 
@@ -49,16 +49,16 @@ const Box = ({ position, images }) => {
   let materials = null;
 
   if (images === 1) {
-    materials = cubeImg.map((img) => (
-      <meshPhysicalMaterial attachArray="material" key={img.id} map={img} />
+    materials = cubeImg.map((img, index) => (
+      <meshPhysicalMaterial attach={`material-${index}`} key={img.id} map={img} />
     ));
   } else if (images === 2) {
-    materials = cubeImg2.map((img) => (
-      <meshPhysicalMaterial attachArray="material" key={img.id} map={img} />
+    materials = cubeImg2.map((img, index) => (
+      <meshPhysicalMaterial attach={`material-${index}`} key={img.id} map={img} />
     ));
   } else if (images === 3) {
-    materials = cubeImg3.map((img) => (
-      <meshPhysicalMaterial attachArray="material" key={img.id} map={img} />
+    materials = cubeImg3.map((img, index) => (
+      <meshPhysicalMaterial attach={`material-${index}`} key={img.id} map={img} />
     ));
   }
 

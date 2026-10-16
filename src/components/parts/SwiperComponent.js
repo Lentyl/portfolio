@@ -15,6 +15,7 @@ const SwiperComponent = ({ title, subtitle, text, hostHref, githubHref, slideNum
       <a
         className={`swiper-component__project-container swiper-component__slide${slideNumber}-position`}
         href={hostHref}
+        aria-label={`${title} project preview`}
       />
       <div className="swiper-component__btn-container">
         <a href={hostHref}>

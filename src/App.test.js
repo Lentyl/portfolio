@@ -1,9 +1,12 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+jest.mock('./components/MainPage', () => () => <main />);
+
+test('renders the portfolio application', () => {
+  const { container } = render(<App />);
+
+  expect(container.querySelector('.app-container')).toBeInTheDocument();
+  expect(screen.getByRole('main')).toBeInTheDocument();
 });

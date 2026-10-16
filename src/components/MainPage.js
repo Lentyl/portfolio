@@ -23,6 +23,8 @@ const MainPage = () => {
     const drops = [];
 
     let resetTime = 0;
+    let animationFrame;
+    const timers = [];
     const matrixEffect = () => {
       for (var x = 0; x < columns; x++) drops[x] = 1;
 
@@ -47,30 +49,35 @@ const MainPage = () => {
             drops[i]++;
           }
         }
-        requestAnimationFrame(draw);
+        animationFrame = requestAnimationFrame(draw);
       }
       draw();
     };
 
-    setTimeout(() => {
+    timers.push(setTimeout(() => {
       setPlaySmoke(true);
-    }, 4900);
+    }, 4900));
 
     const windowWidth = window.matchMedia("(min-width: 1280px)");
 
     if (windowWidth.matches) {
-      setTimeout(() => {
+      timers.push(setTimeout(() => {
         matrixEffect();
-      }, 12800);
+      }, 12800));
     } else {
-      setTimeout(() => {
+      timers.push(setTimeout(() => {
         matrixEffect();
-      }, 10000);
+      }, 10000));
     }
 
-    setTimeout(() => {
+    timers.push(setTimeout(() => {
       setVideoVisible(false);
-    }, 13500);
+    }, 13500));
+
+    return () => {
+      timers.forEach(clearTimeout);
+      cancelAnimationFrame(animationFrame);
+    };
   }, []);
 
   return (

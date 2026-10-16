@@ -9,9 +9,14 @@ import {
 } from "react-icons/fa";
 import Certificate from "../Certificate";
 import Diploma from "../Diploma";
-import Pdf from "../../img/MariuszPodgorskiCV-English.pdf";
+import Pdf from "../../img/Mariusz Podgorski CV.pdf";
 import Extra from "../../mp3/Extra-Read-All-About-It.mp3";
 import ReactHowler from "react-howler";
+
+const phoneHref = "tel:+48795702478";
+const emailHref =
+  "mailto:m.b.podgorski1984@gmail.com?subject=Wiadomość%20ze%20strony%20podgorskiportfolio.pl&body=Cześć Mariusz,";
+const cvDownloadName = "Mariusz Podgorski CV.pdf";
 
 const Newspaper = () => {
   const [date, setDate] = useState(null);
@@ -28,16 +33,19 @@ const Newspaper = () => {
 
     let play = true;
 
-    document.addEventListener("scroll", () => {
+    const handleScroll = () => {
       if (window.scrollY >= dist && play === true) {
         setNewsStart(true);
         play = false;
       }
-    });
+    };
+    document.addEventListener("scroll", handleScroll);
 
     //date newspaper
     const time = new Date().toISOString().slice(0, 10);
     setDate(time);
+
+    return () => document.removeEventListener("scroll", handleScroll);
   }, []);
   return (
     <div
@@ -101,32 +109,39 @@ const Newspaper = () => {
           preload={true}
         />
         <div className="contact__newspaper-media-container">
-          <a className="contact__newspaper-tel-link" href="tel:+48795-702-478">
+          <a className="contact__newspaper-tel-link" href={phoneHref}>
             <FaPhoneAlt className="contact__newspaper-tel-button" />
           </a>
-          +48 795-702-478
+          <a className="contact__newspaper-media-text-link" href={phoneHref}>
+            +48 795-702-478
+          </a>
         </div>
 
         <div className="contact__newspaper-media-container">
-          <a
-            className="contact__newspaper-media-link"
-            href="mailto:m.b.podgorski1984@gmail.com?subject=Wiadomość%20ze%20strony%20podgorskiportfolio.pl&body=Cześć Mariusz,"
-          >
+          <a className="contact__newspaper-media-link" href={emailHref}>
             <FaEnvelope />
           </a>
-          m.b.podgorski1984@gmail.com
+          <a className="contact__newspaper-media-text-link" href={emailHref}>
+            m.b.podgorski1984@gmail.com
+          </a>
         </div>
 
         <div className="contact__newspaper-media-container">
           <a
             className="contact__newspaper-media-link"
             href={Pdf}
-            target="_blank"
-            rel="noopener noreferrer"
+            download={cvDownloadName}
+            aria-label="Download curriculum vitae"
           >
             <FaDownload />
           </a>
-          Curriculum vitae
+          <a
+            className="contact__newspaper-media-text-link"
+            href={Pdf}
+            download={cvDownloadName}
+          >
+            Curriculum vitae
+          </a>
         </div>
 
         <div className="contact__newspaper-media-container contact__newspaper-media-center">

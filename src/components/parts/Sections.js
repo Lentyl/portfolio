@@ -22,8 +22,18 @@ const division = sectionsList.map((divisionItem) => {
         >
           {divisionItem.title}
         </header>
-        <p className="sections__division-text">The foundation of my continuous development is self studying. I am a stakeholder orientated and motivated individual, who can provide a high level website development, testing and maintenance service.
-        I proved my knowledge about software quality by getting {<Certificate/>}. I am proactive, eager to lend a hand and learn from others so that I can engage with all activities. I deliver an excellent web development experience utilising the latest technologies. I am keen to join an organisation where I will be able to develop and expand my skillset.</p>
+        <p className="sections__division-text">
+          I am a QA Automation Engineer with over five years of experience
+          testing web applications, currently focused on financial and
+          investment products. I build automation frameworks and develop and
+          maintain test suites using Playwright with TypeScript, Selenium and
+          REST Assured with Java. My work also includes API, exploratory,
+          front-end and integration testing, performance testing with k6,
+          setting up Jenkins pipelines, and supporting teammates in test
+          automation. I also define AI workflows for testing. I hold a
+          postgraduate diploma in Software Testing and the ISTQB Foundation
+          Level certification ({<Certificate />}).
+        </p>
         <div className="sections__division-me-bg"></div>
       </li>
     );
